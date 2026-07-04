@@ -2,7 +2,6 @@
 
 A real-time flight difficulty detection framework that quantifies flight operational complexity at Chicago O'Hare (ORD) to enable proactive resource planning.
 
-**Team Neutrinos** — Abhilash & Rajveer
 
 ## Business Problem
 
@@ -39,6 +38,12 @@ Certain flights are operationally complex due to tight ground times, high baggag
 |---|---|
 | `Skyhack3_0.ipynb` | Data cleaning, EDA, feature engineering, and difficulty scoring model |
 | `SkyPulse.pptx` | Final presentation of problem, methodology, findings, and recommendations |
+| `Airports Data.xlsx` | Source data — airport reference info |
+| `Flight Level Data.xlsx` | Source data — flight schedules and ground times |
+| `Bag+Level+Data.xlsx` | Source data — baggage records |
+| `PNR+Flight+Level+Data.xlsx` | Source data — passenger bookings |
+| `PNR Remark Level Data.xlsx` | Source data — SSR remarks |
+| `test_neutrinos.csv` | Final output — per-flight Difficulty Score and classification |
 
 ## Tech Stack
 
@@ -46,7 +51,17 @@ Python · pandas · numpy · scikit-learn (MinMaxScaler) · matplotlib · seabor
 
 ## Data
 
-The notebook expects five source CSVs (not included): `Airports Data.csv`, `Bag+Level+Data.csv`, `Flight Level Data.csv`, `PNR Remark Level Data.csv`, `PNR+Flight+Level+Data.csv`. Place them alongside the notebook or update the load paths.
+The five original source files are included in this repo:
+
+| File | Contents |
+|---|---|
+| `Airports Data.xlsx` | Airport reference data |
+| `Flight Level Data.xlsx` | Scheduled/actual flight times, ground times, load factors |
+| `Bag+Level+Data.xlsx` | Baggage-level records (checked, transfer, hot transfer) |
+| `PNR+Flight+Level+Data.xlsx` | Passenger booking data joined to flights |
+| `PNR Remark Level Data.xlsx` | Special Service Request (SSR) remarks per passenger |
+
+`test_neutrinos.csv` contains the final output — each flight's computed Flight Difficulty Score and Easy/Medium/Difficult classification.
 
 ## Running the Notebook
 
@@ -54,3 +69,7 @@ The notebook expects five source CSVs (not included): `Airports Data.csv`, `Bag+
 pip install pandas numpy matplotlib seaborn scikit-learn
 jupyter notebook Skyhack3_0.ipynb
 ```
+
+## License
+
+MIT — see [LICENSE](LICENSE).
